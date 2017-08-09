@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DDCombatTracker</string>
+    <string name="button_open">Open</string>
 </resources>
