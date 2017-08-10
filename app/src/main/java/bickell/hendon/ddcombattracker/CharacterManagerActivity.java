@@ -72,4 +72,7 @@ public class CharacterManagerActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //TODO Fix Crashes when clicking new Character/edit
+    //TODO Get Characters for Listview
 }
