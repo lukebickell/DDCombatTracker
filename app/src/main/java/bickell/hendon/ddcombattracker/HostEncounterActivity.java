@@ -57,7 +57,7 @@ public class HostEncounterActivity extends AppCompatActivity {
 
     private class SocketServerThread extends Thread {
 
-        static final int SocketServerPORT = 8080;
+        static final int SocketServerPORT = 8080;// TODO use int resource
         int count = 0;
 
         @Override

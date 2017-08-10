@@ -20,28 +20,15 @@ import java.net.UnknownHostException;
 
 
 public class MainActivity extends AppCompatActivity {
+    private AlertDialog joinEncounterDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
 
-    /**
-     * Called when the user taps the Send button
-     */
-    public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        startActivity(intent);
-    }
-
-    public void hostEncounter(View view) {
-        Intent intent = new Intent(this, HostEncounterActivity.class);
-        startActivity(intent);
-    }
-
-    public void joinEncounter(View view) {
+        // construct the join encounter alert dialog
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-
         // set title
         alertDialogBuilder.setTitle("Join Encounter");
 
@@ -72,11 +59,25 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-        // create alert dialog
-        AlertDialog alertDialog = alertDialogBuilder.create();
+        joinEncounterDialog = alertDialogBuilder.create();
+    }
 
-        // show it
-        alertDialog.show();
+    /**
+     * Called when the user taps the Send button
+     */
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        startActivity(intent);
+    }
+
+    public void hostEncounter(View view) {
+        Intent intent = new Intent(this, HostEncounterActivity.class);
+        startActivity(intent);
+    }
+
+    public void joinEncounter(View view) {
+
+        joinEncounterDialog.show();
     }
 
     public class MyClientTask extends AsyncTask<Void, Void, Void> {
