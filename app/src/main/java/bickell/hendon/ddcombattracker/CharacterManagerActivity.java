@@ -36,8 +36,9 @@ public class CharacterManagerActivity extends AppCompatActivity {
         // Instanciating an array list (you don't need to do this,
         // you already have yours).
         List<String> your_array_list = new ArrayList<>();
-        your_array_list.add("foo");
-        your_array_list.add("bar");
+        for (Character character:((MyApplication) this.getApplication()).getPlayerCharacters()){
+            your_array_list.add(character.getName());
+        }
 
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
@@ -63,10 +64,11 @@ public class CharacterManagerActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        Intent intent = new Intent(this, CharacterCreationActivity.class);
-        startActivity(intent);
+
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_name) {
+            Intent intent = new Intent(this, CharacterCreationActivity.class);
+            startActivity(intent);
             return true;
         }
 

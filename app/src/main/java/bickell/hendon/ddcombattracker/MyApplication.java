@@ -11,6 +11,12 @@ import java.util.ArrayList;
 public class MyApplication extends Application {
     private ArrayList<Character> playerCharacters;
 
+    public MyApplication()
+    {
+        super();
+        playerCharacters = new ArrayList<>();
+    }
+
     public ArrayList<Character> getPlayerCharacters() {
         return playerCharacters;
     }
