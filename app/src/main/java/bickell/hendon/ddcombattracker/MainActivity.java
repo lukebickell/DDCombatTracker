@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
      * Called when the user taps the Send button
      */
     public void sendMessage(View view) {
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        Intent intent = new Intent(this, CharacterManagerActivity.class);
         startActivity(intent);
     }
 
@@ -169,12 +169,8 @@ public class MainActivity extends AppCompatActivity {
             // DO SOMETHING WITH RESULT
             super.onPostExecute(result);
         }
+    }
 
-    /** Called when the user taps the Manage Characters button */
-        public void sendMessage(View view) {
-            Intent intent = new Intent(this, CharacterManagerActivity.class);
-            startActivity(intent);
-        }
 
     // FOR CLOSING
     public JSONArray serializeCharacters()
@@ -210,6 +206,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     }
-}
+
 
 
