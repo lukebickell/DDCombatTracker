@@ -20,6 +20,7 @@ public class MyApplication extends Application {
     public ArrayList<Character> getPlayerCharacters() {
         return playerCharacters;
     }
+
     public void setPlayerCharacters(ArrayList<Character> playerCharacters) {
         this.playerCharacters = playerCharacters;
     }

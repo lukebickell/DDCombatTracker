@@ -5,4 +5,8 @@
     <string name="text_to_be_seen_by_user">New Character</string>
     <string name="no_title" />
     <string name="project_title"><![CDATA[D&D Combat Tracker]]></string>
+    <string name="charactersFileName">playerCharacters.json</string>
+    <string name="charactersPrefKey">characters</string>
+    <string name="charactersJSONObjectName">characters</string>
+    <string name="Preferences">CombatPreferences</string>
 </resources>
