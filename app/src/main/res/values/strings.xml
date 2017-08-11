@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">DDCombatTracker</string>
     <string name="button_open">Open</string>
+    <string name="ListView">Open</string>
+    <string name="text_to_be_seen_by_user">New Character</string>
+    <string name="no_title" />
+    <string name="project_title"><![CDATA[D&D Combat Tracker]]></string>
 </resources>
